@@ -1,6 +1,7 @@
 from datetime import date
 
-DATA_FILE = "duomenys.txt"
+
+DATA_FILE = "duomenys.csv"
 
 
 class Invoice:
