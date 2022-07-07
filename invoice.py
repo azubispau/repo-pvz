@@ -1,5 +1,7 @@
 from datetime import date
 
+DATA_FILE = "duomenys.txt"
+
 
 class Invoice:
 
@@ -9,3 +11,10 @@ class Invoice:
         self.invoice_date = invoice_date
         self.price = price
 
+    def get_formatted_data(self):
+        return ";".join([self.name, self.surname, str(self.invoice_date), self.price])
+
+
+def add_new_invoice(invoice: Invoice):
+    with open(DATA_FILE, "w") as f:
+        f.write(invoice.get_formatted_data())
